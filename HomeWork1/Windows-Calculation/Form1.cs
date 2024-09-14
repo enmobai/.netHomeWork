@@ -66,8 +66,9 @@ namespace HomeWork1
             if (timePerQuestion <= 0)
             {
                 timer.Stop();
-                await Task.Delay(1000);
+                
                 label3.Text = "超时！进入下一题";
+                await Task.Delay(1000);
                 ProceedToNextQuestion();
             }
         }
