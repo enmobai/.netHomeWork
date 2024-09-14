@@ -30,7 +30,7 @@
 
         static bool judge(int i)
         {
-            for(int j = 2; j < Math.Sqrt(i); j++)
+            for(int j = 2; j <= Math.Sqrt(i); j++)
             {
                 if (i % j == 0)
                 {
