@@ -11,7 +11,7 @@ namespace HomeWork1
             GenerateQuestion();
             
 
-            button1.Click += new EventHandler(this.submitButton_Click); // 绑定按钮事件
+            button1.Click += new EventHandler(this.submitButton_Click); 
         }
 
 
@@ -59,13 +59,14 @@ namespace HomeWork1
             timer.Tick += Timer_Tick;
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private async void Timer_Tick(object sender, EventArgs e)
         {
             label1.Text = "本题剩余时间：" + timePerQuestion+"s";
             timePerQuestion--;
             if (timePerQuestion <= 0)
             {
                 timer.Stop();
+                await Task.Delay(1000);
                 label3.Text = "超时！进入下一题";
                 ProceedToNextQuestion();
             }

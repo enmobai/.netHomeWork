@@ -67,7 +67,6 @@ namespace HomeWork1
             label2.Size = new Size(63, 24);
             label2.TabIndex = 2;
             label2.Text = "label2";
-            label2.Click += label2_Click;
             // 
             // textBox1
             // 
